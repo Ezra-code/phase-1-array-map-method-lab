@@ -12,5 +12,22 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map((arr) => {
+    let tutorial = arr.split(" ")
+    let result = tutorial.map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    return result.join(" ")  
+  })
+  // for (const tutorial of tutorials) {
+  //   let arr = tutorial.split(" ")
+  //   let result = arr.map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+  //   return result.join(" ")   
+  // }
+
 }
+// for (const tutorial of tutorials) {
+// //   let arr = tutorial.split(" ")
+// //   let result = arr.map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+// //   // return result.join(" ")   
+// //   console.log(result.join(" "))
+
+// // }
